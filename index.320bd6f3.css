@@ -423,5 +423,6 @@ a:focus-visible {
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
+    border: 2px solid black;
     background-color: white;
 }
