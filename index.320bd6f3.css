@@ -413,7 +413,7 @@ a:focus-visible {
 #doge-ball4{
     height: 200px;
     width: 200px;
-    background: url('immagine.png');
+    background: url('./css/img/immagine.png');
     background-size: cover;
     position: absolute;
     left: 0;
