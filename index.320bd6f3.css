@@ -325,7 +325,7 @@ a:focus-visible {
 #doge-ball{
     height: 200px;
     width: 200px;
-    background: url('./profile.png');
+    background: url('profile.png');
     background-size: cover;
     position: absolute;
     z-index: 2;
@@ -397,7 +397,7 @@ a:focus-visible {
 #doge-ball3{
     height: 200px;
     width: 200px;
-    background: url('./profile.png');
+    background: url('profile.png');
     background-size: cover;
     position: absolute;
     left: 0;
@@ -413,7 +413,7 @@ a:focus-visible {
 #doge-ball4{
     height: 200px;
     width: 200px;
-    background: url('./immagine.png');
+    background: url('immagine.png');
     background-size: cover;
     position: absolute;
     left: 0;
