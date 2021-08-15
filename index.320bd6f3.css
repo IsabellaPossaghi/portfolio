@@ -154,6 +154,11 @@ a:focus-visible {
   pointer-events: none;
 }
 
+.menu__item2 a {
+  color: #a6a6a6;
+}
+
+
 .menu__item {
   cursor: default;
   position: relative;
@@ -325,7 +330,7 @@ a:focus-visible {
     position: absolute;
     z-index: 2;
     border-radius: 50%;
-    border: 5px solid black;
+    border: 2px solid black;
 
 
    -webkit-animation: horizontal 10s, vertical 11s;
@@ -352,7 +357,7 @@ a:focus-visible {
     z-index: 2;
     border-radius: 50%;
     /* border: 5px solid yellow; */
-    border: 5px solid black;
+    border: 2px solid black;
 
 
    -webkit-animation: horizontal 10s, vertical 11s;
