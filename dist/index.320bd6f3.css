@@ -145,6 +145,15 @@ a:focus-visible {
   justify-content: center
 }
 
+.menu__item2 {
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 3px var(--color-border);
+  pointer-events: none;
+}
+
 .menu__item {
   cursor: default;
   position: relative;
@@ -316,7 +325,7 @@ a:focus-visible {
     position: absolute;
     z-index: 2;
     border-radius: 50%;
-    /* border: 5px solid yellow; */
+    border: 5px solid black;
 
 
    -webkit-animation: horizontal 10s, vertical 11s;
@@ -335,13 +344,15 @@ a:focus-visible {
 #doge-ball2{
     height: 200px;
     width: 200px;
-    background-size: cover;
     background-color: #ffe6ff;
+    /* background: url('immagine2.png'); */
+    background-size: cover;
     text-align: center;
     position: absolute;
     z-index: 2;
     border-radius: 50%;
     /* border: 5px solid yellow; */
+    border: 5px solid black;
 
 
    -webkit-animation: horizontal 10s, vertical 11s;
