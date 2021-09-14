@@ -94,6 +94,12 @@ a:focus {
 	margin: 0 0 2.5rem;
 }
 
+.frame__credits {
+	font-size: 0.8rem;
+	margin: 0 0 2.5rem;
+	text-align: center;
+}
+
 
 .frame__links {
 	display: flex;
