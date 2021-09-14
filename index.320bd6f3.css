@@ -295,6 +295,18 @@ a:focus-visible {
   }
 }
 
+@media screen and (min-width:1280px)  {
+  .menu-wrap {
+    height: 110vh;
+  }
+}
+
+@media screen and (max-width:1290px)  {
+  .menu-wrap {
+    height: 110vh;
+  }
+}
+
 
 
 .frame:after {
