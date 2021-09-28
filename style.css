@@ -211,3 +211,7 @@ p {
   text-decoration: none;
   color: var(--yellow)
 }
+
+.no_click {
+  pointer-events: none;
+}
