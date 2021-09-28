@@ -1,0 +1,213 @@
+:root {
+  --primary: #9999ff;
+  --secondary: #808080;
+  --background: #292b36;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+  --pink: #ff66ff;
+}
+
+body {
+  background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
+  background-size: 2px 3px;
+  color: var(--primary);
+}
+
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600&display=swap");
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+h1 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 2em;
+  padding: 0.8em 0 0.2em 0;
+  font-weight:50;
+  color:
+}
+
+p {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  color: white;
+}
+
+
+.card {
+  background-color: var(--background);
+  display: block;
+  width: 25%;
+  height: 20%;
+  border: 1px solid var(--primary);
+  padding: 5px;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--orange),
+        40px -40px 0 -1px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 50vh;
+  left: 50vh;
+  cursor: pointer;
+}
+
+.card:hover {
+  top: 48vh;
+  left: 48vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+
+.card p {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  font-size: 1em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+.main {
+  max-width: 980px;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.contact {
+  margin-top: 2em;
+}
+
+
+.blinking-cursor {
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.window__caption--button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.window__caption--button::after {
+  content: "×";
+  font-size: 1.5rem;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.window__caption--button:hover {
+  color: #292b36;
+  background: white;
+}
+
+/* MAGIC */
+.magic:before{
+  content: "";
+}
+
+.magic:hover:before{
+  content: "a magazine called ";
+}
+
+.magic_2:before{
+  content: "";
+}
+
+.magic_2:hover:before{
+  content: "a mobile app called ";
+}
+
+.magic_3:before{
+  content: "";
+}
+
+.magic_3:hover:before{
+  content: "a dataviz called ";
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .card { display: none; }
+  h1 { font-size: 2em;}
+  p {font-size: 1em;}
+}
+
+.text-replace{
+  color: white;
+  font-weight: 500;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.text-replace:hover{
+  text-decoration: none;
+  color: var(--yellow)
+}

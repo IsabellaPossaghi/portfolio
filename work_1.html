@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nido | A magazine about nonconventional interiors</title>
+  <link rel="icon" type="image/png" href="./img/book.ico"/>
+  <link rel="stylesheet" href="./style_work_1.css">
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  </style>
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="icon text-replace" onclick="displayImage();">
+    <img src="./img/icon.ico" width="80%">
+    <p>folder</p>
+  </div>
+
+  <div class="window window--img draggable">
+    <div class="window__caption">
+      <p>mockup.jpg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img id="mage" src="./img/mag_4.png" name="canvas">
+  </div>
+
+
+
+  <div class="window window--normal window--opened draggable">
+    <div class="window__caption">
+      <p>minimal_interiors.txt</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <div class="window__content">
+      <p><i>Nido</i>, because nests are both small or large,
+        exposed to the winds or hidden among the leaves,
+        woven and lined with their own feathers,
+        all built to protect and enclose.<span class="blinking-cursor">|<span></p>
+    </div>
+  </div>
+
+  <div class="window window--gif window--opened draggable">
+    <div class="window__caption">
+      <p>index.jpeg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img src="./img/mag_2.png">
+  </div>
+
+  <div class="window window--gif_2 window--opened draggable">
+    <div class="window__caption">
+      <p>pages.jpeg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img src="./img/mag_5.jpg">
+  </div>
+
+  <div class="window window--color card window--opened draggable">
+    <div class="window__content">
+      <p><i>Nido</i>:<br>an editorial project</p>
+    </div>
+  </div>
+
+  <!-- <div class="window window--warning window--opened draggable">
+    <div class="window__caption">
+      <p class="warning">Don't click !</p>
+      <div class="window__caption--button"></div>
+    </div>
+  </div> -->
+
+  <div class="title">
+    <p><img src="./img/book.ico"> <i>Nido</i> | A magazine about nonconventional interiors.</p>
+  </div>
+
+  <div class="main_img">
+    <img src="./img/mag_3.jpg" width="900px">
+  </div>
+
+  <div class="main">
+    <p><i>Nido</i> is an independent interior
+      magazine in Italian language.
+      It questions the intrinsic meaning
+      and minimum requirements that
+      define the concept of "home",
+      “shelter”, proposing a selection
+      of intertwined visual content
+      with the reflections of numerous
+      external collaborators.</p>
+
+    <div class="main_img">
+      <img src="./img/mag.jpg">
+    </div>
+
+    <p>This hypothesis of magazine was born
+      from scratch. Start with an imaginary newsroom
+      that offers an imaginary proposal,
+      created in function of a university course
+      (the real one, luckily). Both the jury-rigged editorial staff (a.k.a. ourself)
+      and the course exists only thanks to meetings
+      digital on Microsoft Teams, which replaces
+      the physicality of the work table and classrooms
+      and that allows you to talk and see inside
+      of special "rooms". <br><br>
+      Also Teams is a small nest, in which, from etymology,
+      you "is". I think it’s just this idea
+      who created the spark for the idea of <i>Nido</i>,
+      which, despite the distance, we have reached
+      in sync.</p>
+  </div>
+
+  <div class="main_img">
+    <img src="./img/mag_6.jpg">
+  </div>
+
+  <div class="main">
+    <p>Forced into our homes, we started
+      to think of interiors, ways of living
+      to objects, then also to the houses of others
+      who, like us, has been in quarantine. <br><br>
+      How do all the others live? What are the minimum requirements
+      to talk about "home"? Are not houses also
+      the rooms in which you create your own space
+      of personalization, the prison cells,
+      the rooms of the sick, the tent cities, the houses
+      Furniture, nomadic homes, temporary homes?
+      By answering these questions, we have created <i>Nido</i>.</p>
+    <p class="blinking-cursor">|</p>
+  </div>
+
+
+
+  <div class="title">
+    <p>======================================</p>
+    <p>Field: Editorial and publishing design</p>
+    <p>Team: Ester Balzarotti, Valentina Ferrari, Ludovica Polo, Isabella Possaghi and Virgilia Ramella.</p>
+    <p>When? June 2020</p>
+  </div>
+
+  <div class="title">
+    <a href="./index.html" class="text-replace">go back</a> | <a href="#" class="cd-top text-replace js-cd-top">reach the top</a>
+    <br><br>
+  </div>
+
+  <div class="overlay overlay--top"></div>
+  <div class="overlay overlay--bottom"></div>
+  <div class="overlay overlay--left"></div>
+  <div class="overlay overlay--right"></div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/utils/Draggable.min.js'></script>
+  <script src="./script_work_1.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
