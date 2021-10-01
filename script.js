@@ -2,18 +2,18 @@ function run(agent) {
   agent.show();
 
   // add stuff here:
-  agent.speak("hmmm...");
+  agent.speak("I'm just annoying");
 
   setTimeout(function() {
-    agent.speak("inspirational quote...");
+    agent.speak("Trying to provide you your daily inspirational quote...");
 
     setTimeout(function() {
-      agent.play('Congratulate');
+      agent.play('Why are you here?');
 
       setTimeout(function() {
-        agent.speak("Hello 1997!");
+        agent.speak("Do you think I'm useless? I'm worse: I'm annoying.");
 
-        agent.play("Pleased");
+        agent.play("Hellooooo my dear");
 
       }, 2000);
     }, 4000);

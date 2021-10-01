@@ -558,12 +558,15 @@ font-size: 1em;
   color: var(--yellow)
 }
 
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  .card { display: none; }
-  h1 { font-size: 2em;}
-  .title {font-size: 1em;}
-}
 
-p {
-  font-size: 1em !important;
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+  .card { display: none;}
+  .title p { font-size: 0.8em;}
+  .main {width: 70%;}
+  p {font-size: 1em;}
+  .text-replace {font-size: 0.8em;}
+  .icon {width: 13%; margin-top: 3em;}
 }
