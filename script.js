@@ -2,13 +2,13 @@ function run(agent) {
   agent.show();
 
   // add stuff here:
-  agent.speak("I'm just annoying");
-
   setTimeout(function() {
-    agent.speak("Trying to provide you your daily inspirational quote...");
+    agent.moveTo(100,100);
+    agent.speak("I'm just annoying");
 
     setTimeout(function() {
-      agent.play('Why are you here?');
+      agent.speak("Trying to provide you your daily inspirational quote...");
+        agent.moveTo(350,100);
 
       setTimeout(function() {
         agent.speak("Do you think I'm useless? I'm worse: I'm annoying.");
@@ -19,7 +19,6 @@ function run(agent) {
     }, 4000);
   }, 3000);
 }
-
 
 document.addEventListener('DOMContentLoaded', function() {
   clippy.load('Clippy', run);
