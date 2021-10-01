@@ -246,7 +246,7 @@ font-size: 1em;
   margin: 5vh 10vh;
   border: 1px solid white;
   box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
-  max-width: 80vh;
+  max-width: 50%;
 }
 
 .main_img img {
@@ -561,8 +561,10 @@ font-size: 1em;
 
 @media screen and (max-width: 992px){
   .card { display: none;}
-  .title p { font-size: 2em;}
-  .main {width: 70%;}
-  p {font-size: 1em;}
-  .text-replace {font-size: 0.8em;}
-  .icon { display: none;}
+  .title p { font-size: 1.5em;}
+  .main {width: 60%;}
+  p {font-size: 1.2em;}
+  .text-replace {font-size: 1.2em;}
+  .icon {display: none;}
+  .main_img {max-width: 70%;}
+}
