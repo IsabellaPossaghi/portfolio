@@ -220,8 +220,7 @@ p {
   pointer-events: none;
 }
 
-@media only screen
-  and (max-device-width: 600px){
+@media screen and (max-width: 992px){
   .card { display: none;}
   h1 { font-size: 2em;}
   p {font-size: 1em;}

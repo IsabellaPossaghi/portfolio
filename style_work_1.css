@@ -559,8 +559,7 @@ font-size: 1em;
 }
 
 
-@media only screen
-  and (max-device-width: 600px) {
+@media screen and (max-width: 992px){
   .card { display: none;}
   .title p { font-size: 0.8em;}
   .main {width: 70%;}
