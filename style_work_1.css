@@ -561,9 +561,8 @@ font-size: 1em;
 
 @media screen and (max-width: 992px){
   .card { display: none;}
-  .title p { font-size: 0.8em;}
+  .title p { font-size: 2em;}
   .main {width: 70%;}
   p {font-size: 1em;}
   .text-replace {font-size: 0.8em;}
-  .icon {width: 13%; margin-top: 3em;}
-}
+  .icon { display: none;}
