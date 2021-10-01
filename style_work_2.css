@@ -1,0 +1,570 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:700&display=swap");
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --primary: #9999ff;
+  --secondary: #808080;
+  --background: #292b36;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --orange: #FF9C55;
+  --red: #FF5555;
+  --pink: #ff33cc;
+}
+
+
+
+body {
+  background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
+  background-size: 2px 3px;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  width: 100vw;
+  height: 100vh;
+}
+
+.icon {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+  width: 75px;
+  height: 75px;
+  position: fixed;
+  top: 2px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon:hover{
+  color: var(--primary);
+}
+
+.icon svg {
+  width: 60px;
+  height: 45px;
+  margin-bottom: -2px;
+}
+.icon svg path {
+  fill: white;
+}
+
+.draggable {
+  cursor: grab !important;
+}
+
+.window {
+  opacity: 0;
+  visibility: hidden;
+  background: #292b36;
+  border: 1px solid white;
+  box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+}
+
+.window--opened {
+  opacity: 1;
+  visibility: visible;
+}
+.window--normal {
+  width: 565px;
+  top: 90%;
+  left: 55%;
+}
+.window--warning {
+  width: 205px;
+  top: 45%;
+  left: 15%;
+}
+.window--gif {
+  width: 365px;
+  top: 23%;
+  left: 25%;
+}
+.window--gif_2 {
+  width: 365px;
+  top: 5%;
+  left: 60%;
+}
+.window--gif_plebbit {
+  width: 15%;
+  top: 3%;
+  right: 6%;
+}
+.window--gif_yt {
+  width: 20%;
+  top: 18%;
+  left: 2%;
+}
+.window--al {
+  width: 365px;
+  position: absolute;
+  left: 65%;
+}
+.window--img {
+  width: 15%;
+  right: 10%;
+  top: 10%;
+  z-index: 1;
+  position: fixed;
+}
+
+.window--gif img, .window--img img {
+  width: 100%;
+  display: block;
+}
+.window--gif_2 img, .window--img img {
+  width: 100%;
+  display: block;
+}
+.window--gif_plebbit img, .window--img img {
+  width: 100%;
+  display: block;
+}
+.window--gif_yt img, .window--img img {
+  width: 100%;
+  display: block;
+}
+.window--al img, .window--img img {
+  width: 100%;
+  display: block;
+}
+.window--color {
+  background: #ff00f4;
+  width: 285px;
+  border-color: #ff00f4;
+  box-shadow: none;
+  top: 50%;
+  left: 25%;
+}
+.window__caption {
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.65px;
+  width: 100%;
+  height: 40px;
+  padding-left: 1rem;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.window--warning .window__caption {
+  text-decoration: underline;
+}
+.window--warning .window__caption p  {
+  cursor: pointer;
+}
+.window__caption--button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+.window__caption--button::after {
+  content: "×";
+  font-size: 1.5rem;
+  padding-bottom: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.window__caption--button:hover {
+  color: #555BFF;
+  background: white;
+}
+.window__content {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 1.5rem 2.5rem;
+  cursor: default;
+}
+.window--color .window__content {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 1px;
+  padding: 1.5rem;
+  cursor: grab;
+}
+
+.overlay {
+  background: white;
+  position: absolute;
+  z-index: 1000000;
+}
+.overlay--top, .overlay--bottom {
+  width: 100%;
+  height: calc(50vh - 1px);
+  left: 0;
+  transform: scaleY(0);
+}
+.overlay--top {
+  top: 0;
+  transform-origin: top center;
+}
+.overlay--bottom {
+  bottom: 0;
+  transform-origin: bottom center;
+}
+.overlay--left, .overlay--right {
+  width: 50%;
+  height: 2px;
+  top: 50%;
+}
+.overlay--left {
+  left: 0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+}
+.overlay--right {
+  right: 0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right center;
+}
+
+.title {
+margin: 5vh 10vh;
+font-size: 1em;
+}
+
+.main_img{
+  margin: 5vh 10vh;
+  border: 1px solid white;
+  box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
+  max-width: 80vh;
+}
+
+.main_img img {
+  width: 100%;
+  display: block;
+}
+
+.main_img_2{
+  margin: 5vh 10vh;
+  border: 1px solid white;
+  box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
+  max-width: 150vh;
+}
+
+.main_img_2 img {
+  width: 100%;
+  display: block;
+}
+
+.main_img_3{
+  margin: 5vh 10vh;
+  border: 1px solid white;
+  box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
+  max-width: 120vh;
+}
+
+.main_img_3 img {
+  width: 100%;
+  display: block;
+}
+
+
+.main{
+  width: 30%;
+  margin: 5vh 10vh;
+}
+
+/* CARDS */
+
+.card {
+  background-color: var(--primary);
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--orange),
+        40px -40px 0 -1px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 40vh;
+  left: 55vh;
+  cursor: pointer;
+}
+
+.card:hover {
+  top: 43vh;
+  left: 58vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+.card p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 5em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+.card_2 {
+  background-color: var(--orange);
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
+        40px -40px 0 -1px var(--background), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 40vh;
+  left: 55vh;
+  cursor: pointer;
+}
+
+.card_2:hover {
+  top: 43vh;
+  left: 58vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+.card_2 p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+
+.card_2 h2 {
+  font-size: 5em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+.card_3 {
+  background-color: var(--green);
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--red),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
+        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 40vh;
+  left: 55vh;
+  cursor: pointer;
+}
+
+.card_3:hover {
+  top: 43vh;
+  left: 58vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+.card_3 p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+
+.card_3 h2 {
+  font-size: 5em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+.card_4 {
+  background-color: var(--red);
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
+        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 40vh;
+  left: 55vh;
+  cursor: pointer;
+}
+
+.card_4:hover {
+  top: 43vh;
+  left: 58vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+.card_4 p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+
+.card_4 h2 {
+  font-size: 5em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+.card_5 {
+  background-color: var(--pink);
+  display: block;
+  width: 25%;
+  border: 1px solid white;
+  margin: calc(20vh - 1vh) 30vh;
+  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
+        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
+        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
+        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position:  absolute;
+  top: 18vh;
+  left: 35vh;
+  cursor: pointer;
+}
+
+.card_5:hover {
+  top: 21vh;
+  left: 38vh;
+  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
+      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
+      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
+}
+
+.card_5 p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+
+.card_5 h2 {
+  font-size: 5em;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+
+/* CARD END */
+
+
+.blinking-cursor {
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.cd-top--is-visible { // back-to-top button visible
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out { // reduce button opacity if user keeps scrolling
+  opacity: .5;
+}
+
+.text-replace{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.text-replace:hover{
+  text-decoration: none;
+  color: var(--yellow)
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .card { display: none; }
+  h1 { font-size: 2em;}
+  .title {font-size: 1em;}
+}
+
+p {
+  font-size: 1em !important;
+}

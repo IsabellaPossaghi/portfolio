@@ -119,6 +119,7 @@ body {
   z-index: 1;
   position: fixed;
 }
+
 .window--gif img, .window--img img {
   width: 100%;
   display: block;

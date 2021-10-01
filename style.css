@@ -194,11 +194,15 @@ p {
   content: "a dataviz called ";
 }
 
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  .card { display: none; }
-  h1 { font-size: 2em;}
-  p {font-size: 1em;}
+.magic_4:before{
+  content: "";
 }
+
+.magic_4:hover:before{
+  content: "a data analysis called ";
+}
+
+
 
 .text-replace{
   color: white;
@@ -214,4 +218,13 @@ p {
 
 .no_click {
   pointer-events: none;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+  .card { display: none;}
+  h1 { font-size: 2em;}
+  p {font-size: 1em;}
 }
