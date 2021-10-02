@@ -242,6 +242,11 @@ margin: 5vh 10vh;
 font-size: 1em;
 }
 
+.footer {
+margin: 5vh 10vh;
+font-size: 1em;
+}
+
 .main_img{
   margin: 5vh 10vh;
   border: 1px solid white;
@@ -560,8 +565,8 @@ font-size: 1em;
 
 
 @media screen and (max-width: 992px){
-  .card { display: none;}
-  .title p { font-size: 1.5em;}
+  .card {display: none;}
+  .title p {font-size: 1.5em;}
   .main {width: 60%;}
   p {font-size: 1.2em;}
   .text-replace {font-size: 1.2em;}
@@ -571,4 +576,5 @@ font-size: 1em;
     background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
     background-size: 5px 5px;
   }
+  .footer p {font-size: 0.5em;}
 }
