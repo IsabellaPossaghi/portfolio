@@ -210,6 +210,23 @@ a:hover {
   content: "a data analysis called ";
 }
 
+.magic_5:before{
+  content: "";
+}
+
+.magic_5:hover:before{
+  content: "a data analysis called ";
+}
+
+.magic_6:before{
+  content: "";
+}
+
+.magic_6:hover:before{
+  content: "a Web site for a company called ";
+}
+
+
 
 .text-replace{
   color: white;

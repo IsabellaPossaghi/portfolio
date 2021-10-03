@@ -79,9 +79,10 @@ body {
   visibility: visible;
 }
 .window--normal {
-  width: 565px;
+  width: 30%;
   top: 90%;
-  left: 55%;
+  left: 65%;
+  z-index: 1
 }
 .window--warning {
   width: 205px;
@@ -96,8 +97,9 @@ body {
 .window--gif_2 {
   width: 365px;
   top: 5%;
-  left: 60%;
+  left: 55%;
 }
+
 .window--gif_plebbit {
   width: 15%;
   top: 3%;
@@ -121,6 +123,12 @@ body {
   position: fixed;
 }
 
+.window--gif_ex {
+  width: 15%;
+  top: 20%;
+  left: 30%;
+}
+
 .window--gif img, .window--img img {
   width: 100%;
   display: block;
@@ -133,6 +141,7 @@ body {
   width: 100%;
   display: block;
 }
+
 .window--gif_yt img, .window--img img {
   width: 100%;
   display: block;
@@ -141,6 +150,12 @@ body {
   width: 100%;
   display: block;
 }
+
+.window--gif_ex img, .window--img img {
+  width: 100%;
+  display: block;
+}
+
 .window--color {
   background: #ff00f4;
   width: 285px;
@@ -239,6 +254,10 @@ body {
 }
 
 .title {
+margin: 5vh 10vh;
+font-size: 1em;
+}
+.footer {
 margin: 5vh 10vh;
 font-size: 1em;
 }
