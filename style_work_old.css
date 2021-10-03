@@ -25,7 +25,7 @@
 
 body {
   background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
-  background-size: 3px 3px;
+  background-size: 2px 3px;
   color: white;
   font-family: "Source Code Pro", monospace;
   width: 100vw;
@@ -79,9 +79,10 @@ body {
   visibility: visible;
 }
 .window--normal {
-  width: 565px;
+  width: 30%;
   top: 90%;
-  left: 55%;
+  left: 65%;
+  z-index: 1
 }
 .window--warning {
   width: 205px;
@@ -96,8 +97,9 @@ body {
 .window--gif_2 {
   width: 365px;
   top: 5%;
-  left: 60%;
+  left: 55%;
 }
+
 .window--gif_plebbit {
   width: 15%;
   top: 3%;
@@ -114,21 +116,20 @@ body {
   left: 65%;
 }
 .window--img {
-  width: 30%;
-  left: 50%;
+  width: 15%;
+  right: 10%;
+  top: 10%;
   z-index: 1;
   position: fixed;
 }
-.window--gif_4 {
-  width: 30%;
-  top: 23%;
-  left: 35%;
+
+.window--gif_ex {
+  width: 15%;
+  top: 20%;
+  left: 30%;
 }
+
 .window--gif img, .window--img img {
-  width: 100%;
-  display: block;
-}
-.window--gif_4 img, .window--img img {
   width: 100%;
   display: block;
 }
@@ -140,6 +141,7 @@ body {
   width: 100%;
   display: block;
 }
+
 .window--gif_yt img, .window--img img {
   width: 100%;
   display: block;
@@ -148,6 +150,12 @@ body {
   width: 100%;
   display: block;
 }
+
+.window--gif_ex img, .window--img img {
+  width: 100%;
+  display: block;
+}
+
 .window--color {
   background: #ff00f4;
   width: 285px;
@@ -249,7 +257,6 @@ body {
 margin: 5vh 10vh;
 font-size: 1em;
 }
-
 .footer {
 margin: 5vh 10vh;
 font-size: 1em;
@@ -259,7 +266,7 @@ font-size: 1em;
   margin: 5vh 10vh;
   border: 1px solid white;
   box-shadow: 0px 15px 12px -10px rgba(0, 0, 0, 0.3);
-  max-width: 50%;
+  max-width: 80vh;
 }
 
 .main_img img {
@@ -300,7 +307,7 @@ font-size: 1em;
 /* CARDS */
 
 .card {
-  background-color: var(--primary);
+  background-color: var(--red);
   display: block;
   width: 25%;
   border: 1px solid white;
@@ -308,17 +315,17 @@ font-size: 1em;
   box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
         20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
         30px -30px 0 -1px var(--background), 30px -30px var(--orange),
-        40px -40px 0 -1px var(--background), 40px -40px var(--red);
+        40px -40px 0 -1px var(--background), 40px -40px var(--primary);
   transition: box-shadow 1s, top 1s, left 1s;
   position:  absolute;
-  top: 40vh;
-  left: 55vh;
+  top: 30vh;
+  left: 35vh;
   cursor: pointer;
 }
 
 .card:hover {
-  top: 43vh;
-  left: 58vh;
+  top: 33vh;
+  left: 38vh;
   box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
       0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
       0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
@@ -338,200 +345,6 @@ font-size: 1em;
   font-weight: normal;
 }
 
-.card_2 {
-  background-color: var(--orange);
-  display: block;
-  width: 25%;
-  border: 1px solid white;
-  margin: calc(20vh - 1vh) 30vh;
-  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
-        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
-        40px -40px 0 -1px var(--background), 40px -40px var(--red);
-  transition: box-shadow 1s, top 1s, left 1s;
-  position:  absolute;
-  top: 40vh;
-  left: 55vh;
-  cursor: pointer;
-}
-
-.card_2:hover {
-  top: 43vh;
-  left: 58vh;
-  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
-}
-
-.card_2 p {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  overflow: hidden;
-}
-
-.card_2 h2 {
-  font-size: 5em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-}
-
-.card_3 {
-  background-color: var(--green);
-  display: block;
-  width: 25%;
-  border: 1px solid white;
-  margin: calc(20vh - 1vh) 30vh;
-  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--red),
-        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
-        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
-  transition: box-shadow 1s, top 1s, left 1s;
-  position:  absolute;
-  top: 40vh;
-  left: 55vh;
-  cursor: pointer;
-}
-
-.card_3:hover {
-  top: 43vh;
-  left: 58vh;
-  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
-}
-
-.card_3 p {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  overflow: hidden;
-}
-
-.card_3 h2 {
-  font-size: 5em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-}
-
-.card_4 {
-  background-color: var(--red);
-  display: block;
-  width: 25%;
-  border: 1px solid white;
-  margin: calc(20vh - 1vh) 30vh;
-  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
-        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
-        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
-  transition: box-shadow 1s, top 1s, left 1s;
-  position:  absolute;
-  top: 40vh;
-  left: 55vh;
-  cursor: pointer;
-}
-
-.card_4:hover {
-  top: 43vh;
-  left: 58vh;
-  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
-}
-
-.card_4 p {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  overflow: hidden;
-}
-
-.card_4 h2 {
-  font-size: 5em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-}
-
-.card_5 {
-  background-color: var(--pink);
-  display: block;
-  width: 25%;
-  border: 1px solid white;
-  margin: calc(20vh - 1vh) 30vh;
-  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
-        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -1px var(--background), 30px -30px var(--primary),
-        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
-  transition: box-shadow 1s, top 1s, left 1s;
-  position:  absolute;
-  top: 18vh;
-  left: 35vh;
-  cursor: pointer;
-}
-
-.card_5:hover {
-  top: 21vh;
-  left: 38vh;
-  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
-}
-
-.card_5 p {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  overflow: hidden;
-}
-
-.card_5 h2 {
-  font-size: 5em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-}
-
-.card_6 {
-  background-color: var(--primary);
-  display: block;
-  width: 25%;
-  border: 1px solid white;
-  margin: calc(20vh - 1vh) 30vh;
-  box-shadow: 10px -10px 0 -1px var(--background), 10px -10px var(--green),
-        20px -20px 0 -1px var(--background), 20px -20px var(--yellow),
-        30px -30px 0 -1px var(--background), 30px -30px var(--red),
-        40px -40px 0 -1px var(--background), 40px -40px var(--orange);
-  transition: box-shadow 1s, top 1s, left 1s;
-  position:  absolute;
-  top: 18vh;
-  left: 2vh;
-  cursor: pointer;
-}
-
-.card_6:hover {
-  top: 11vh;
-  left: 4vh;
-  box-shadow: 0 0 0 -0.5px var(--background), 0 0 0 0 var(--green),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--yellow),
-      0 0 0 -1px var(--background), 0 0 0 0  var(--orange),
-      0 0 0 -1px  var(--background), 0 0 0 0  var(--red);
-}
-
-.card_6 p {
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  overflow: hidden;
-}
-
-.card_6 h2 {
-  font-size: 5em;
-  font-family: 'Source Code Pro', monospace;
-  font-weight: normal;
-}
 
 /* CARD END */
 
@@ -608,20 +421,13 @@ font-size: 1em;
 .text-replace:hover{
   text-decoration: none;
   color: #deff0a;
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .card { display: none; }
+  h1 { font-size: 2em;}
+  .title {font-size: 1em;}
 }
 
-
-@media screen and (max-width: 992px){
-  .card {display: none;}
-  .title p {font-size: 1.5em;}
-  .main {width: 60%;}
-  p {font-size: 1.2em;}
-  .text-replace {font-size: 1.2em;}
-  .icon {display: none;}
-  .main_img {max-width: 70%;}
-  body {
-    background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
-    background-size: 5px 5px;
-  }
-  .footer p {font-size: 0.5em;}
+p {
+  font-size: 1em !important;
 }

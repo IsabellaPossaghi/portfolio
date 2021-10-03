@@ -575,8 +575,7 @@ font-size: 1em;
 
 .text-replace:hover{
   text-decoration: none;
-  color: var(--yellow)
-}
+  color: #deff0a;
 
 @media screen and (min-width: 0px) and (max-width: 400px) {
   .card { display: none; }

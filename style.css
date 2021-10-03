@@ -265,7 +265,7 @@ a:hover {
 }
 .window--normal {
   width: 30%;
-  top: 90%;
+  top: 50%;
   left: 55%;
 }
 
@@ -277,6 +277,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 
 .window__caption--button {
@@ -295,6 +296,16 @@ a:hover {
   cursor: default;
 }
 
+.text-replace{
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.text-replace:hover{
+  text-decoration: none;
+  color: #deff0a;
+}
 
 @media screen and (max-width: 992px){
   .card { display: none;}
