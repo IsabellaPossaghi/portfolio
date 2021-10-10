@@ -613,9 +613,9 @@ font-size: 1em;
 
 @media screen and (max-width: 992px){
   .card {display: none;}
-  .title p {font-size: 1.5em;}
+  .title p {font-size: 1.5em !important;}
   .main {width: 60%;}
-  p {font-size: 1.2em;}
+  p {font-size: 1.2em !important;}
   .text-replace {font-size: 1.2em;}
   .icon {display: none;}
   .main_img {max-width: 70%;}
@@ -623,6 +623,6 @@ font-size: 1em;
     background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
     background-size: 5px 5px;
   }
-  .footer p {font-size: 0.6em;}
-  .footer a {font-size: 0.7em;}
+  .footer p {font-size: 0.6em !important;}
+  .footer a {font-size: 0.7em !important;}
 }
