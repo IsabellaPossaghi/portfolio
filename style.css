@@ -307,9 +307,18 @@ a:hover {
   color: #deff0a;
 }
 
+.desktop{
+  background-color: var(--primary)  !important;
+  padding: 1em 2em;
+  text-align: center;
+  font-size: 0.7em;
+  display: none;
+}
+
 @media screen and (max-width: 992px){
   .card { display: none;}
   h1 { font-size: 2em;}
   p {font-size: 1em;}
   .window { display: none;}
+  .desktop {display: block;}
 }

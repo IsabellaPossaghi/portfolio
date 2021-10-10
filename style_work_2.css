@@ -586,3 +586,19 @@ font-size: 1em;
 p {
   font-size: 1em !important;
 }
+
+@media screen and (max-width: 992px){
+  .card {display: none;}
+  .title p {font-size: 1.5em;}
+  .main {width: 60%;}
+  p {font-size: 1.2em;}
+  .text-replace {font-size: 1.2em;}
+  .icon {display: none;}
+  .main_img {max-width: 70%;}
+  body {
+    background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
+    background-size: 5px 5px;
+  }
+  .footer p {font-size: 0.6em;}
+  .footer a {font-size: 0.7em;}
+}

@@ -623,5 +623,6 @@ font-size: 1em;
     background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
     background-size: 5px 5px;
   }
-  .footer p {font-size: 0.5em;}
+  .footer p {font-size: 0.6em;}
+  .footer a {font-size: 0.7em;}
 }

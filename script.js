@@ -23,3 +23,11 @@ function run(agent) {
 document.addEventListener('DOMContentLoaded', function() {
   clippy.load('Clippy', run);
 });
+
+var mq = window.matchMedia( "(max-width: 570px)" );
+if (mq.matches) {
+  clippy.load('Clippy', run);
+}
+else {
+    clippy.load('Clippy', setTimeout);
+}
