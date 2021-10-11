@@ -431,3 +431,35 @@ font-size: 1em;
 p {
   font-size: 1em !important;
 }
+
+.desktop{
+  background-color: var(--primary)  !important;
+  padding: 1em 2em;
+  text-align: center;
+  font-size: 0.7em;
+  display: none;
+}
+
+
+@media screen and (max-width: 1000px){
+  .card {display: none;}
+  .card_2 {display: none;}
+  .card_3 {display: none;}
+  .card_4 {display: none;}
+  .card_5 {display: none;}
+  .card_6 {display: none;}
+  .title p {font-size: 1.9em !important;}
+  .main {width: 60%;}
+  p {font-size: 1.5em !important;}
+  .text-replace {font-size: 1.2em;}
+  .icon {display: none;}
+  .main_img {max-width: 70%;}
+  body {
+    background-image:radial-gradient(var(--secondary) 30%, var(--background) 30%);
+    background-size: 7px 7px;
+  }
+  .footer p {font-size: 1em !important;}
+  .footer a {font-size: 1em !important;}
+  .footer {padding-bottom: 1em;}
+  .desktop {display: block;}
+}

@@ -226,6 +226,10 @@ a:hover {
   content: "a Web site for a company called ";
 }
 
+.magic_8:hover:before{
+  content: "a space installation called  ";
+}
+
 
 
 .text-replace{
@@ -242,6 +246,7 @@ a:hover {
 
 .no_click {
   pointer-events: none;
+  text-decoration: line-through;
 }
 
 /* WINDOW */

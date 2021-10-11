@@ -29,5 +29,5 @@ if (mq.matches) {
   clippy.load('Clippy', run);
 }
 else {
-    clippy.load('Clippy', setTimeout);
+    clippy.load('Clippy', run);
 }
