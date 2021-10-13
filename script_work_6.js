@@ -66,7 +66,7 @@ function displayImage(){
 //   return Math.floor((Math.random() * (array.length)));
 // }
 
-document.getElementById('mage').src = "./img/hex_cards.png";
+document.getElementById('mage').src = "./img/hex_case.png";
 
 // function init() {
 //

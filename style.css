@@ -226,6 +226,18 @@ a:hover {
   content: "a Web site for a company called ";
 }
 
+.magic_7:before{
+  content: "";
+}
+
+.magic_7:hover:before{
+  content: "an installation called  ";
+}
+
+.magic_8:before{
+  content: "";
+}
+
 .magic_8:hover:before{
   content: "a space installation called  ";
 }

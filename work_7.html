@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Urbis + Metropolis | Painting a mixed landscape</title>
+  <link rel="icon" type="image/png" href="./img/paint.ico" />
+  <link rel="stylesheet" href="./style_work_2.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="desktop">
+    <p><span style="color: white">Please open the Web site in desktop, <br> not really responsive yet</span></p>
+  </div>
+  <!-- partial:index.partial.html -->
+  <div class="icon text-replace" onclick="displayImage();">
+    <img src="./img/icon.ico" width="80%">
+    <p>folder</p>
+  </div>
+
+  <div class="window window--img draggable">
+    <div class="window__caption">
+      <p>me_and_the_brush.jpg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img id="mage" src="./img/paint_1.jpg" name="canvas">
+  </div>
+
+  <div class="window window--normal window--opened draggable">
+    <div class="window__caption">
+      <p>landscape.txt</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <div class="window__content">
+      <p><i>Rome and New York</i>, an interlocking of monuments that forms a new kind of Wonderland.<br>
+        Bright red hybrid city suspended
+        between the ancient and the modern.<span class="blinking-cursor">|<span></p>
+    </div>
+  </div>
+
+  <div class="window window--gif window--opened draggable">
+    <div class="window__caption">
+      <p>columns.jpeg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img src="./img/paint_2.jpg">
+  </div>
+
+  <div class="window window--gif_2 window--opened draggable">
+    <div class="window__caption">
+      <p>stairs.jpeg</p>
+      <div class="window__caption--button"></div>
+    </div>
+    <img src="./img/paint_3.jpg">
+  </div>
+
+  <div class="window window--color card_2 window--opened draggable">
+    <div class="window__content">
+      <p><i>Urbis + Metropolis</i>:<br>Painting a peculiar skyline</p>
+    </div>
+  </div>
+
+  <div class="title">
+    <p><img src="./img/paint.ico"> <i>Urbis + Metropolis</i> | Painting a peculiar skyline.</p>
+  </div>
+
+  <div class="main_img">
+    <img src="./img/paint_4.jpg" width="900px">
+  </div>
+
+  <div class="main">
+    <p>For the <i>Milan Fashion Week 2019</i> a scenography
+      that mixes ancient vibes with contemporary
+      architecture details has been built.</p>
+  </div>
+
+  <div class="main_img">
+    <img src="./img/paint_5.jpg">
+  </div>
+
+  <div class="main">
+    <p>I had the pleasure of helping Evelina Floris
+      with the panel’s decorations, painting them
+      in bright red. The concept was design by S.
+      Colantuoni and then developed on site.</p>
+      <p class="blinking-cursor">|</p>
+  </div>
+
+  <div class="main_img">
+    <img src="./img/paint_6.jpg">
+  </div>
+
+
+  <div class="footer">
+    <p>======================================</p>
+    <p>Field: Spatial design | Traditional art, commission for NegriFirman Showroom</p>
+    <p>Art Director: Sergio Colantuoni</p>
+    <p>Artist and Illustrator: Evelina Floris</p>
+    <p>When? March 2019</p>
+  </div>
+
+  <div class="footer">
+    <a href="./index.html" class="text-replace">go back</a> | <a href="#" class="cd-top text-replace js-cd-top">reach the top</a>
+    <br><br>
+  </div>
+
+  <div class="overlay overlay--top"></div>
+  <div class="overlay overlay--bottom"></div>
+  <div class="overlay overlay--left"></div>
+  <div class="overlay overlay--right"></div>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/utils/Draggable.min.js'></script>
+  <script src="./script_work_7.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

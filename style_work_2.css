@@ -576,16 +576,9 @@ font-size: 1em;
 .text-replace:hover{
   text-decoration: none;
   color: #deff0a;
-
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  .card { display: none; }
-  h1 { font-size: 2em;}
-  .title {font-size: 1em;}
 }
 
-p {
-  font-size: 1em !important;
-}
+
 
 .desktop{
   background-color: var(--primary)  !important;
@@ -594,7 +587,6 @@ p {
   font-size: 0.7em;
   display: none;
 }
-
 
 @media screen and (max-width: 1000px){
   .card {display: none;}
