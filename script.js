@@ -7,11 +7,11 @@ function run(agent) {
     agent.speak("I'm just annoying");
 
     setTimeout(function() {
-      agent.speak("Trying to provide you your daily inspirational quote...");
+      agent.speak("Trying to provide you your daily inspirational quote... no, I can't.");
         agent.moveTo(350,100);
 
       setTimeout(function() {
-        agent.speak("Do you think I'm useless? I'm worse: I'm annoying.");
+        agent.speak("Do you think I'm useless? I'm worse than that.");
 
         agent.play("Hellooooo my dear");
 
