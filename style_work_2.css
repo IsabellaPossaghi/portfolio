@@ -19,6 +19,7 @@
   --orange: #FF9C55;
   --red: #FF5555;
   --pink: #ff33cc;
+  --purple: #9a04fd;
 }
 
 
@@ -385,7 +386,7 @@ font-size: 1em;
 }
 
 .card_3 {
-  background-color: var(--green);
+  background-color: var(--purple);
   display: block;
   width: 25%;
   border: 1px solid white;

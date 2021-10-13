@@ -19,6 +19,7 @@
   --orange: #FF9C55;
   --red: #FF5555;
   --pink: #ff33cc;
+  --purple: #9a04fd;
 }
 
 
@@ -609,6 +610,7 @@ font-size: 1em;
   text-decoration: none;
   color: #deff0a;
 }
+
 
 .desktop{
   background-color: var(--primary)  !important;
