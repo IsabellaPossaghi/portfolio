@@ -12,7 +12,7 @@
 
 body {
   background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
-  background-size: 3px 3px;
+  background-size: 2.5px 2.5px;
   color: var(--primary);
 }
 
@@ -26,6 +26,8 @@ body {
   box-sizing: border-box;
   user-select: none;
 }
+
+
 
 h1 {
   font-family: 'Source Code Pro', monospace;
