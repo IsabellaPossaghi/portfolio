@@ -292,8 +292,20 @@ a:hover {
 }
 .window--normal {
   width: 30%;
-  top: 50%;
-  left: 55%;
+  top: 40%;
+  left: 58%;
+}
+
+.window--normal_1 {
+  width: 20%;
+  top: 65%;
+  left: 40%;
+}
+
+.window--normal_2 {
+  width: 20%;
+  top: 55%;
+  left: 40%;
 }
 
 .window__caption {
@@ -304,7 +316,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .window__caption--button {
@@ -325,7 +337,7 @@ a:hover {
 
 .text-replace{
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   font-style: italic;
 }
 
